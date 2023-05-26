@@ -6,34 +6,12 @@ console.log('requestAPI_Football-data.js cargado')
 const apiKey = '66c89d5ac62549d18b5ba92f5b14844d'
 const makeRequest = async () => {
   try {
-    // const respuesta = await fetch(
-    //   'https://api.football-data.org/v4/matches',
-    //   { mode: 'cors' },
-    //   {
-    //     headers: {
-    //       'Content-type': 'application/json',
-    //       Origin: 'https://localhost',
-    //       'X-Auth-Token': '66c89d5ac62549d18b5ba92f5b14844d',
-    //       'X-Authenticated-Client': 'Jimbo Jones',
-    //       credentials: 'include',
-    //       'X-API-Version': 'v4',
-    //       'Access-Control-Allow-Origin': '*',
-    //     },
-    //   }
-    // )
-    // const data = await response.json()
-
     axios
-      .get('https://api.football-data.org/v4/matches', {
-        headers: {
-          'X-Auth-Token': apiKey,
-          credentials: 'include',
-          mode: 'no-cors',
-          // 'Access-Control-Allow-Origin': '*',
-        },
-      })
+      .get('https://api-football-standings.azharimm.dev/leagues/eng.1', {})
       .then((response) => {
         console.log(response.data)
+        //enviar response a una función
+        //nombrefuncion(response.data)
       })
 
     if (!response.ok) {
