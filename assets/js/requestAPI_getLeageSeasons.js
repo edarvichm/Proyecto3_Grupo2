@@ -12,7 +12,7 @@ const getLeageSeasons = async (leage) => {
       `http://api-football-standings.azharimm.dev/leagues/${leage}/seasons`
     )
     if (response.status === 200) {
-      console.log(response.data.data)
+      console.log(response.data)
       //enviar response a una función
       const leageSeasons = document.getElementById('leageSeasons')
       drawInfo(response.data.data.seasons, leageSeasons)
