@@ -1,4 +1,4 @@
-export const graph = (datos, contenedor) => {
+const graph = (datos, contenedor) => {
   console.log(contenedor)
   console.log(datos.standings)
   const team = datos.standings.map((elemento) => elemento.team.name)
@@ -77,7 +77,4 @@ export const graph = (datos, contenedor) => {
       },
     },
   })
-
-  // ! desafío..... está linea destruye el gráfico para que puedan reutilizarlo. Deben posicionarla en un lugar en particular
-  //   grafico.destroy()
 }
