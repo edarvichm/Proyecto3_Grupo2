@@ -1,6 +1,6 @@
 const graph = (datos, contenedor) => {
-  console.log(contenedor)
-  console.log(datos.standings)
+  // console.log(contenedor)
+  // console.log(datos.standings)
   const team = datos.standings.map((elemento) => elemento.team.name)
   const wins = datos.standings.map((elemento) => elemento.stats[7].value)
   const ties = datos.standings.map((elemento) => elemento.stats[6].value)
@@ -11,8 +11,10 @@ const graph = (datos, contenedor) => {
     ties: ties,
     losses: losses,
   }
-  // team.reverse()
-  // wins.reverse()
+
+  //valida si existe grafico y lo destruye antes de crear uno nuevo
+  if (Chart.getChart(contenedor)) Chart.getChart(contenedor).destroy()
+
   const grafico = new Chart(contenedor, {
     type: 'bar',
     data: {
