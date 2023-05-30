@@ -1,9 +1,9 @@
 console.log('requestAPI_Football-data.js cargado')
-// import { graph } from './graph.js'
+import { graph } from './graph.js'
 
-const getLeageStandings = async (leage, year) => {
-  leage = document.getElementById('select')
-  year = document.getElementById('year')
+export const getLeageStandings = async () => {
+  let leage = document.getElementById('select')
+  let year = document.getElementById('year')
   try {
     const response = await axios.get(
       `http://api-football-standings.azharimm.dev/leagues/${leage.value}/standings?season=${year.value}&sort=asc`

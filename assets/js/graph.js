@@ -1,4 +1,4 @@
-const graph = (datos, contenedor) => {
+export const graph = (datos, contenedor) => {
   // console.log(contenedor)
   // console.log(datos.standings)
   const team = datos.standings.map((elemento) => elemento.team.name)
