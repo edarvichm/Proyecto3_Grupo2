@@ -1,3 +1,5 @@
+import { getLeageStandings } from './requestAPI_getLeageStandings.js'
+
 const getDataLeagues = async () => {
   const url = 'https://api-football-standings.azharimm.dev/leagues'
 
@@ -41,6 +43,7 @@ const getDataLocalStorage = () => {
 }
 
 const getDataSelectByID = async (id) => {
+
   const getData = await getDataLocalStorage();
 
   if (getData.length > 0) {
@@ -49,7 +52,8 @@ const getDataSelectByID = async (id) => {
 }
 
 const addDataToHtml = async (data) => {
-  const cardBody = document.getElementById('data');
+
+  const cardBody = document.getElementById('data')
 
   cardBody.innerHTML = `
       <img src="${data.logos.light}" class="card-img-top" style="height: 300px; width: 300px;"></img>
@@ -57,13 +61,17 @@ const addDataToHtml = async (data) => {
       <div class="card-body">
         <h5 class="card-title">${data.name}</h5>
         <p class="card-text">${data.abbr}.</p>
-        <button onclick="goToAction('${data.id}')" class="btn btn-outline-success">Temporadas</button>
+        <button id="Temporadas" class="btn btn-outline-success">Temporadas</button>
       </div>
-  `;
+  `
+
+  const button = document.getElementById('Temporadas')
+  button.addEventListener('click', getLeageStandings)
 }
 
 const goToAction = async (id) => {
-  alert(id);
+  alert(id)
+
 }
 
 const selectLeague = async () => {
@@ -74,6 +82,10 @@ const selectLeague = async () => {
 
   await addDataToHtml(dataById)
 }
+
+
+const selectElement = document.getElementById('select')
+selectElement.addEventListener('change', selectLeague)
 
 const main = async () => {
   const dataApi = await getDataLeagues()
