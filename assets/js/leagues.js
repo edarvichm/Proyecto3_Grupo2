@@ -54,7 +54,8 @@ const addDataToHtml = async (data) => {
   const cardBody = document.getElementById('data')
 
   cardBody.innerHTML = `
-      <img src="${data.logos.light}" class="card-img-center" style="height: 200px; width: 200px;"></img>
+
+      <img src="${data.logos.light}" class="card-img-top" style="height: 300px; width: 300px;"></img>
 
       <div class="card-body">
         <h5 class="card-title">${data.name}</h5>
