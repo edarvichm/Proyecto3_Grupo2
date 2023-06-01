@@ -4,7 +4,9 @@
 
 ## Dashboard de Ligas por Año
 ``` 
-Este documento es un README para un dashboard que muestra las estadísticas de victorias, empates y derrotas de diferentes ligas a lo largo de los años. El objetivo principal de este dashboard es proporcionar una visión general y comparativa de los resultados de las ligas en diferentes temporadas.#
+Este documento es un README para un dashboard que muestra las estadísticas de victorias, empates y derrotas
+ de diferentes ligas a lo largo de los años. El objetivo principal de este dashboard es proporcionar una 
+ visión general y comparativa de los resultados de las ligas en diferentes temporadas.#
 ```
 
 ## Funcionalidades principales
