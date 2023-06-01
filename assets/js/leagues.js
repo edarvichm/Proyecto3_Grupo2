@@ -43,18 +43,19 @@ const getDataLocalStorage = () => {
 }
 
 const getDataSelectByID = async (id) => {
-  const getData = await getDataLocalStorage()
+
+  const getData = await getDataLocalStorage();
 
   if (getData.length > 0) {
-    return getData.filter((data) => data.id == id)[0]
+    return getData.filter((data) => data.id == id)[0];
   }
 }
 
 const addDataToHtml = async (data) => {
+
   const cardBody = document.getElementById('data')
 
   cardBody.innerHTML = `
-
       <img src="${data.logos.light}" class="card-img-top" style="height: 300px; width: 300px;"></img>
 
       <div class="card-body">
@@ -70,6 +71,7 @@ const addDataToHtml = async (data) => {
 
 const goToAction = async (id) => {
   alert(id)
+
 }
 
 const selectLeague = async () => {
@@ -80,6 +82,7 @@ const selectLeague = async () => {
 
   await addDataToHtml(dataById)
 }
+
 
 const selectElement = document.getElementById('select')
 selectElement.addEventListener('change', selectLeague)
