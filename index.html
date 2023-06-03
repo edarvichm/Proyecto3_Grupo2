@@ -70,6 +70,7 @@
 
     <div class="container-fluid">
       <div class="row">
+
         <aside class="side-bar col-3">
           <div class="liga-container mt-2">
             <h3 class="title-ligas">League</h3>
@@ -77,43 +78,52 @@
             <ul class="mt-2" id="listTeam"></ul>
           </div>
         </aside>
+
         <main class="col-9">
           <div class="row">
             <div class="col-4">
-              <div
-                class="card mt-2"
-                style="height: 100%; width: 100%"
-                id="data"
-              ></div>
+              <div class="card d-flex flex-column mt-2 px-3">
+                <select class="form-select mt-2" aria-label="Default select example" id="year" alt="year">
+                  <option disabled>Select Season Year</option>
+                  <option selected value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                </select>
+                <div id="data">
+
+                </div>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="card d-flex flex-column mt-2 px-3">
+                <!-- INFO PARA AGREGAR -->
+                <div class="row">
+                  <div class="col-12">
+                    <h4 class="card-title pt-3">Tabla de Posiciones</h4>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <select
-            class="form-select mt-2"
-            aria-label="Default select example"
-            id="year"
-            alt="year"
-          >
-            <option disabled>Select Season Year</option>
-            <option selected value="2022">2022</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
-            <option value="2019">2019</option>
-            <option value="2018">2018</option>
-            <option value="2017">2017</option>
-            <option value="2016">2016</option>
-            <option value="2015">2015</option>
-            <option value="2014">2014</option>
-            <option value="2013">2013</option>
-          </select>
-
-          <section id="LeagueSeasons">
-            <h1>Performance Table</h1>
-            <div class="row"></div>
+          <section id="LeagueSeasons" class="card mt-3">
+            <div class="row">
+              <div class="col-12">
+                <h4 class="graph-title p-4">Performance Table</h4>
+              </div>
+              <div class="col-12">
+                <canvas id="leagueStandingGraph"></canvas>   
+              </div>
+            </div>
           </section>
-          <div>
-            <canvas id="leagueStandingGraph"></canvas>
-          </div>
+
         </main>
       </div>
       <!-- END ROW -->

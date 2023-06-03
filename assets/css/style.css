@@ -60,3 +60,21 @@ ul#listTeam li button:hover {
     transform: translateX(7px) scale(1.05);
     font-weight: 400;
 }
+
+#data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-top {
+    max-width: 200px;
+    margin-top: 1rem;
+}
+
+h4.graph-title, .card-title {
+    color: #142173;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}

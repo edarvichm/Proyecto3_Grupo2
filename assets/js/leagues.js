@@ -77,16 +77,16 @@ const addDataToHtml = async (data) => {
   const cardBody = document.getElementById('data')
 
   cardBody.innerHTML = `
-      <img src="${data.logos.light}" class="card-img-top" style="height: 300px; width: 300px;"></img>
+      <img src="${data.logos.light}" class="card-img-top"></img>
 
       <div class="card-body">
         <h5 class="card-title">${data.name}</h5>
-        <button id="temporadas" class="btn btn-outline-success">Temporadas</button>
       </div>
   `
 
-  const button = document.getElementById('temporadas')
-  button.addEventListener('click', getLeagueStandings(idSelected))
+  getLeagueStandings(idSelected);
+  //const button = document.getElementById('temporadas')
+  //button.addEventListener('click', getLeagueStandings(idSelected))
 }
 
 const selectLeague = async (id) => {
