@@ -93,7 +93,14 @@ const selectLeague = async (id) => {
   // const selectElement = document.getElementById('listTeam')
   idSelected = id
 
-  const dataById = await getDataSelectByID(id)
+  const dataById = await getDataSelectByID(id);
+
+
+  const selectorRightMenu = document.getElementById('selector-right-menu');
+  selectorRightMenu.style.display = "block";
+
+  const selectorRightImg = document.getElementById('selector-right-img');
+  selectorRightImg.style.display = "none";
 
   // console.log('mandamos la data: ' + id)
 

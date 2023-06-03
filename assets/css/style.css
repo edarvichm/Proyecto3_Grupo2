@@ -78,3 +78,8 @@ h4.graph-title, .card-title {
     text-transform: uppercase;
     font-size: 1.2rem;
 }
+
+.welcome {
+    background-image: url("../img/estadio.jpg");
+    background-size: cover;
+}
