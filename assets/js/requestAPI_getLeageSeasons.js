@@ -9,7 +9,7 @@ const apiKey = '66c89d5ac62549d18b5ba92f5b14844d'
 const getLeageSeasons = async (leage) => {
   try {
     const response = await axios.get(
-      `http://api-football-standings.azharimm.dev/leagues/${leage}/seasons`
+      `https://api-football-standings.azharimm.dev/leagues/${leage}/seasons`
     )
     if (response.status === 200) {
       console.log(response.data)

@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
     <!-- Local CSS   -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- Local JS script -->
     <script src="./assets/js/leagues.js" type="module"></script>
     <script
@@ -30,15 +30,26 @@
         <div class="container-fluid">
           <!-- LOGO -->
           <a class="navbar-brand" href="#">
-            <img class="logo-header" src="assets/img/logo-soccerstats.png" alt="logo de soccerstats">
+            <img
+              class="logo-header"
+              src="assets/img/logo-soccerstats.png"
+              alt="logo de soccerstats"
+            />
           </a>
-  
-         
+
           <!-- MENU HAMBURGUESA -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-  
+
           <!-- NAVBAR -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -49,7 +60,7 @@
                 <a class="nav-link" href="#">Info</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">Contacto</a>
               </li>
             </ul>
           </div>
@@ -60,14 +71,30 @@
     <div class="container-fluid">
       <div class="row">
         <aside class="side-bar col-3">
+          <div class="liga-container mt-2">
+            <h3 class="title-ligas">Leage</h3>
+            <p class="dash"></p>
+            <ul class="mt-2" id="listTeam"></ul>
+          </div>
+        </aside>
+        <main class="col-9">
+          <div class="row">
+            <div class="col-4">
+              <div
+                class="card mt-2"
+                style="height: 100%; width: 100%"
+                id="data"
+              ></div>
+            </div>
+          </div>
 
           <select
-            class="form-select mt-1"
+            class="form-select mt-2"
             aria-label="Default select example"
             id="year"
             alt="year"
           >
-            <option disabled>Selecciona el año de la temporada</option>
+            <option disabled>Select Season Year</option>
             <option selected value="2022">2022</option>
             <option value="2021">2021</option>
             <option value="2020">2020</option>
@@ -80,20 +107,6 @@
             <option value="2013">2013</option>
           </select>
 
-          <div class="liga-container mt-2">
-            <h3 class="title-ligas">League</h3>
-            <p class="dash"></p>
-            <ul class="mt-2" id="listTeam">
-            </ul>
-          </div>
-        </aside>
-        <main class="col-9">
-          <div class="row ">
-            <div class="">
-              <div class="card mt-2" style="height: 100%; width: 100%" id="data">
-              </div>
-            </div>
-          </div>
           <section id="leageSeasons">
             <h1>Performance Table</h1>
             <div class="row"></div>
@@ -102,16 +115,9 @@
             <canvas id="leageStandingGraph"></canvas>
           </div>
         </main>
-      </div> <!-- END ROW -->
+      </div>
+      <!-- END ROW -->
     </div>
-    <footer class="footer">
-      <div>
-           <img src="./assets/img/facebook.png" alt="logo facebook">
-           <img src="./assets/img/instagram2.png" alt="logo instagram">
-           <img src="./assets/img/whatsapp.png" alt="logo whatsapp">
-       </div>
-    
-     </footer>  
 
     <!-- Bootstrap JS script  -->
     <script

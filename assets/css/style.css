@@ -60,38 +60,3 @@ ul#listTeam li button:hover {
     transform: translateX(7px) scale(1.05);
     font-weight: 400;
 }
-.card {
-    border: 0px;
-    align-items: center;
-    color: rgb(166, 162, 162);
-}
-#leagueSeasons {
-    display: flex;
-
-}
-
-h1 {
-    font-size: 32px;
-}
-
-.footer img {
-    height: 50px;
-    padding: 10px;
-}
-.footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgb(55, 52, 52);
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-}
-.footer div{
-    border-top: 2px;
-}
-.footer h1 {
-    padding: 10px;
-    text-align: left;
-    color: white;
-
-}
