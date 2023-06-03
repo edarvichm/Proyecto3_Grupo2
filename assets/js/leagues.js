@@ -33,7 +33,7 @@ const addDataSelect = async (data) => {
   botones.forEach((boton) => {
     boton.addEventListener('click', (event) => {
       const idBoton = event.target.id
-      selectLeague(idBoton)
+      selectLeague(idBoton) 
     })
   })
 }
@@ -94,7 +94,6 @@ const selectLeague = async (id) => {
   idSelected = id
 
   const dataById = await getDataSelectByID(id);
-
 
   const selectorRightMenu = document.getElementById('selector-right-menu');
   selectorRightMenu.style.display = "block";
