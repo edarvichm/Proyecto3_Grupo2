@@ -1,5 +1,6 @@
 // console.log('requestAPI_Football-data.js cargado')
 import { graph } from './graph.js'
+import { positionTable } from './positionTable.js'
 
 export const getLeagueStandings = async (idSelected) => {
   // let league = document.getElementById('listTeam')
@@ -13,17 +14,18 @@ export const getLeagueStandings = async (idSelected) => {
       
       // container donde va el grafico
       const container = document.getElementById('leagueStandingGraph')
+      const table = document.getElementById('position')
       
       console.log(response.data.data)
-      //enviar response a una función
+      //enviar response a la función graph para crear el gráfico
       graph(response.data.data, container)
+      //enviar response a la función positionTable para crear la tabla de posiciones
+      positionTable(response.data.data, table)
     }
+
   } catch (error) {
     console.log(error)
   }
 }
 // getLeagueStandings('eng.1', 2022)
 
-export const getLeagueTable = async (idSelected) => {
-  
-}

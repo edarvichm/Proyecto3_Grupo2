@@ -91,6 +91,31 @@ h4.graph-title, .card-title {
 }
 
 .welcome {
-    background-image: url("../img/estadio.jpg");
+    background-image: url(../img/estadio.jpg);
     background-size: cover;
+    position: relative;
+}
+
+div#selector-right-img::before {
+    content: 'Welcome';
+    font-size: 5rem;
+    color: white;
+    position: absolute;
+    left: 23vw;
+    top: 36vh;
+    font-weight: bolder;
+}
+
+div#selector-right-img:after {
+    content: 'Soccer stats API';
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    left: 31vw;
+    top: 46vh;
+    font-weight: 300;
+}
+
+p.position-table {
+    font-size: .7rem;
 }
