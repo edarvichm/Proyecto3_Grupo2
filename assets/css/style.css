@@ -89,3 +89,8 @@ h4.graph-title, .card-title {
 .position-header {
     color: #142173;
 }
+
+.welcome {
+    background-image: url("../img/estadio.jpg");
+    background-size: cover;
+}
