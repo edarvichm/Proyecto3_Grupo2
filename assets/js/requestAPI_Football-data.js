@@ -5,11 +5,11 @@ console.log('requestAPI_Football-data.js cargado')
 // import rp from 'request-promise'
 const apiKey = '66c89d5ac62549d18b5ba92f5b14844d'
 
-const getLeageSeasons = async (leage) => {
+const getLeagueSeasons = async (league) => {
   try {
     axios
       .get(
-        `http://api-football-standings.azharimm.dev/leagues/${leage}/seasons`,
+        `http://api-football-standings.azharimm.dev/leagues/${league}/seasons`,
         {}
       )
       .then((response) => {
@@ -21,4 +21,4 @@ const getLeageSeasons = async (leage) => {
     console.log(error)
   }
 }
-getLeageSeasons('eng.1')
+getLeagueSeasons('eng.1')

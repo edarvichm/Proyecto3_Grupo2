@@ -1,7 +1,8 @@
-import { getLeageStandings } from './requestAPI_getLeageStandings.js'
+import { getLeagueStandings } from './requestAPI_getLeagueStandings.js'
 
 let idSelected = ''
 
+// LLAMADO A LA API
 const getDataLeagues = async () => {
   const url = 'https://api-football-standings.azharimm.dev/leagues'
 
@@ -9,8 +10,11 @@ const getDataLeagues = async () => {
 
   const dataObj = await dataJson.json()
 
+  // RETORNAMOS LOS DATOS OBTENIDOS
   if (dataObj.status == true) {
     return dataObj.data
+  } else {
+    console.error('No se pudo obtener la  data');
   }
 
   return []
@@ -42,7 +46,6 @@ const createOption = (id, name) => {
 
 const saveLocalStorage = async (data) => {
   const stringifyData = JSON.stringify(data)
-
   localStorage.setItem('data', stringifyData)
 }
 
@@ -83,7 +86,7 @@ const addDataToHtml = async (data) => {
   `
 
   const button = document.getElementById('temporadas')
-  button.addEventListener('click', getLeageStandings(idSelected))
+  button.addEventListener('click', getLeagueStandings(idSelected))
 }
 
 const selectLeague = async (id) => {
@@ -100,9 +103,12 @@ const selectLeague = async (id) => {
 // const selectElement = document.getElementById('listTeam')
 // selectElement.addEventListener('click', selectLeague)
 
+
+// LLAMADO DATA DE LA API LEAGUE QUE ENLISTA LOS NOMBRES DE LAS LIGAS
 const main = async () => {
   const dataApi = await getDataLeagues()
 
+  // GUARDAMOS LA DATA OBTENIDA
   if (dataApi.length > 0) {
     await saveLocalStorage(dataApi)
     await addDataSelect(dataApi)

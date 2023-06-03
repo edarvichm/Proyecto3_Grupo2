@@ -6,19 +6,19 @@ import { drawInfo } from './drawInfo.js'
 // import rp from 'request-promise'
 const apiKey = '66c89d5ac62549d18b5ba92f5b14844d'
 
-const getLeageSeasons = async (leage) => {
+const getLeagueSeasons = async (league) => {
   try {
     const response = await axios.get(
-      `https://api-football-standings.azharimm.dev/leagues/${leage}/seasons`
+      `https://api-football-standings.azharimm.dev/leagues/${league}/seasons`
     )
     if (response.status === 200) {
       console.log(response.data)
       //enviar response a una función
-      const leageSeasons = document.getElementById('leageSeasons')
-      drawInfo(response.data.data.seasons, leageSeasons)
+      const leagueSeasons = document.getElementById('leagueSeasons')
+      drawInfo(response.data.data.seasons, leagueSeasons)
     }
   } catch (error) {
     console.log(error)
   }
 }
-getLeageSeasons('eng.1')
+getLeagueSeasons('eng.1')
