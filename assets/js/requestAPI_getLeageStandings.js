@@ -6,7 +6,7 @@ export const getLeageStandings = async (idSelected) => {
   let year = document.getElementById('year')
   try {
     const response = await axios.get(
-      `http://api-football-standings.azharimm.dev/leagues/${idSelected}/standings?season=${year.value}&sort=asc`
+      `https://api-football-standings.azharimm.dev/leagues/${idSelected}/standings?season=${year.value}&sort=asc`
     )
     if (response.status === 200) {
       console.log(response.data.data)
