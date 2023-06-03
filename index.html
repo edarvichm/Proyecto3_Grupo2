@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     />
     <!-- Local CSS   -->
-    <link href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Local JS script -->
     <script src="./assets/js/leagues.js" type="module"></script>
     <script
@@ -24,59 +24,48 @@
 
     <title>Soccer stats</title>
   </head>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Futbool</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Info</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
   <body>
-
-    <div class="container text-center mt-4">
-     
-      <div class="row">
-        <div class="col-4">
-          
-              <div class="container">
-      <div class="row">
-        <div >
-          <h3>Ligas</h3>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- LOGO -->
+          <a class="navbar-brand" href="#">
+            <img class="logo-header" src="assets/img/logo-soccerstats.png" alt="logo de soccerstats">
+          </a>
+  
+         
+          <!-- MENU HAMBURGUESA -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- NAVBAR -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Info</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>
+    </header>
+
+    <div class="container-fluid">
       <div class="row">
-        <div class="mt-2">
+        <aside class="side-bar col-3">
+
           <select
-            class="form-select "
-            aria-label="Default select example"
-            id="select"
-          >
-            <!-- onchange="selectLeague()" -->
-            <option selected disabled>Selecciona una liga</option>
-          </select>
-          <select
-            class="form-select mt-2 "
+            class="form-select mt-1"
             aria-label="Default select example"
             id="year"
             alt="year"
-
           >
             <option disabled>Selecciona el año de la temporada</option>
             <option selected value="2022">2022</option>
@@ -90,34 +79,44 @@
             <option value="2014">2014</option>
             <option value="2013">2013</option>
           </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="mt-2">
-          <div
-            class="card"
-            style="height: 120; width: 120"
-            id="data"
-          ></div>
-        </div>
-      </div>
-    </div>
-        
-  </div>
-        <div class="col-8">
-          
-            <section id="leageSeasons">
-      <h1>Performance Table</h1>
-      <div class="row"></div>
-    </section>
-    <div>
-      <canvas id="leageStandingGraph"></canvas>
-    </div>
-          
-        </div>
-      </div> 
-    </div>
 
+          <div class="liga-container mt-2">
+            <h3 class="title-ligas">Leagues</h3>
+            <p class="dash"></p>
+            <ul class="mt-2" id="listTeam">
+            </ul>
+          </div>
+        </aside>
+        <main class="col-9">
+          <div class="row ">
+            <div class="">
+              <div class="card mt-2" style="height: 100%; width: 100%" id="data">
+              </div>
+            </div>
+          </div>
+
+          
+
+          <section id="leageSeasons">
+            <h1>Performance Table</h1>
+            <div class="row"></div>
+          </section>
+          <div>
+            <canvas id="leageStandingGraph"></canvas>
+          </div>
+        </main>
+      </div> <!-- END ROW -->
+    </div>
+    <footer class="footer">
+      <div>
+           <img src="./assets/img/facebook.png" alt="logo facebook">
+           <img src="./assets/img/instagram2.png" alt="logo instagram">
+           <img src="./assets/img/whatsapp.png" alt="logo whatsapp">
+       </div>
+       <div>
+           
+       </div>
+     </footer>  
 
     <!-- Bootstrap JS script  -->
     <script

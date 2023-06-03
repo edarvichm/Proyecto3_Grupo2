@@ -1,0 +1,97 @@
+.navbar {
+    background-color: #f4f4f4;
+    padding: 1.2rem;
+}
+
+.side-bar {
+    background: linear-gradient(217deg, rgba(38,35,67,1), rgb(15 34 126 / 1));
+    padding: 1rem 2rem 2rem;
+    min-height: 90vh;
+}
+
+h3.title-ligas {
+    color: white;
+    margin: 1.5rem 0 .8rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.league-name {
+    color: white;
+}
+
+.dash {
+    height: 5px;
+    width: 25px;
+    background-color: rgb(68, 68, 252);
+    margin: 0 0 1rem;
+}
+
+.logo-header {
+    max-width: 200px;
+}
+
+.nav-link {
+    color: #142274;
+    font-weight: 200;
+}
+
+ul#listTeam {
+    list-style: none;
+    padding: 0;
+}
+
+ul#listTeam li {
+    padding: .2rem 0;
+}
+
+ul#listTeam li button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 200;
+    transition: all .5s;
+}
+
+ul#listTeam li button:hover {
+    color: #52c2ff;
+    transform: translateX(7px) scale(1.05);
+    font-weight: 400;
+}
+.card {
+    border: 0px;
+    align-items: center;
+    color: rgb(166, 162, 162);
+}
+#leagueSeasons {
+    display: flex;
+
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.footer img {
+    height: 50px;
+    padding: 10px;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(55, 52, 52);
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.footer div{
+    border-top: 2px;
+}
+.footer h1 {
+    padding: 10px;
+    text-align: left;
+    color: white;
+
+}
