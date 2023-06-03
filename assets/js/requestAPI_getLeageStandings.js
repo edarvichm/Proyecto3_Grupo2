@@ -1,4 +1,4 @@
-console.log('requestAPI_Football-data.js cargado')
+// console.log('requestAPI_Football-data.js cargado')
 import { graph } from './graph.js'
 
 export const getLeageStandings = async (idSelected) => {
@@ -9,7 +9,7 @@ export const getLeageStandings = async (idSelected) => {
       `https://api-football-standings.azharimm.dev/leagues/${idSelected}/standings?season=${year.value}&sort=asc`
     )
     if (response.status === 200) {
-      console.log(response.data.data)
+      // console.log(response.data.data)
       //enviar response a una función
       const container = document.getElementById('leageStandingGraph')
       graph(response.data.data, container)

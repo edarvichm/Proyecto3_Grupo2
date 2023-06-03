@@ -24,7 +24,7 @@ const addDataSelect = async (data) => {
   // Obtén una lista de referencias a todos los botones
   const botones = document.querySelectorAll('.league')
 
-  console.log(botones)
+  // console.log(botones)
 
   botones.forEach((boton) => {
     boton.addEventListener('click', (event) => {
@@ -59,7 +59,7 @@ const getDataLocalStorage = () => {
 const getDataSelectByID = async (id) => {
   const getData = await getDataLocalStorage()
 
-  console.log('el getData: ' + getData)
+  // console.log('el getData: ' + getData)
 
   if (getData.length > 0) {
     return getData.filter((data) => data.id == id)[0]
@@ -88,7 +88,7 @@ const selectLeague = async (id) => {
 
   const dataById = await getDataSelectByID(id)
 
-  console.log('mandamos la data: ' + id)
+  // console.log('mandamos la data: ' + id)
 
   await addDataToHtml(dataById)
 }
