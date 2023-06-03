@@ -1,6 +1,10 @@
 import { getLeagueStandings } from './requestAPI_getLeagueStandings.js'
 
 let idSelected = ''
+const yearSelected = document.getElementById('year')
+yearSelected.addEventListener('change', (event) => {
+  getLeagueStandings(idSelected)
+})
 
 // LLAMADO A LA API
 const getDataLeagues = async () => {
@@ -14,7 +18,7 @@ const getDataLeagues = async () => {
   if (dataObj.status == true) {
     return dataObj.data
   } else {
-    console.error('No se pudo obtener la  data');
+    console.error('No se pudo obtener la  data')
   }
 
   return []
@@ -33,7 +37,7 @@ const addDataSelect = async (data) => {
   botones.forEach((boton) => {
     boton.addEventListener('click', (event) => {
       const idBoton = event.target.id
-      selectLeague(idBoton) 
+      selectLeague(idBoton)
     })
   })
 }
@@ -60,20 +64,18 @@ const getDataLocalStorage = () => {
 }
 
 const getDataSelectByID = async (id) => {
-
-  const getData = await getDataLocalStorage();
+  const getData = await getDataLocalStorage()
 
   console.log('el getData: ' + getData)
 
   // console.log('el getData: ' + getData)
 
   if (getData.length > 0) {
-    return getData.filter((data) => data.id == id)[0];
+    return getData.filter((data) => data.id == id)[0]
   }
 }
 
 const addDataToHtml = async (data) => {
-
   const cardBody = document.getElementById('data')
 
   cardBody.innerHTML = `
@@ -84,7 +86,7 @@ const addDataToHtml = async (data) => {
       </div>
   `
 
-  getLeagueStandings(idSelected);
+  getLeagueStandings(idSelected)
   //const button = document.getElementById('temporadas')
   //button.addEventListener('click', getLeagueStandings(idSelected))
 }
@@ -93,13 +95,13 @@ const selectLeague = async (id) => {
   // const selectElement = document.getElementById('listTeam')
   idSelected = id
 
-  const dataById = await getDataSelectByID(id);
+  const dataById = await getDataSelectByID(id)
 
-  const selectorRightMenu = document.getElementById('selector-right-menu');
-  selectorRightMenu.style.display = "block";
+  const selectorRightMenu = document.getElementById('selector-right-menu')
+  selectorRightMenu.style.display = 'block'
 
-  const selectorRightImg = document.getElementById('selector-right-img');
-  selectorRightImg.style.display = "none";
+  const selectorRightImg = document.getElementById('selector-right-img')
+  selectorRightImg.style.display = 'none'
 
   // console.log('mandamos la data: ' + id)
 
@@ -108,7 +110,6 @@ const selectLeague = async (id) => {
 
 // const selectElement = document.getElementById('listTeam')
 // selectElement.addEventListener('click', selectLeague)
-
 
 // LLAMADO DATA DE LA API LEAGUE QUE ENLISTA LOS NOMBRES DE LAS LIGAS
 const main = async () => {
