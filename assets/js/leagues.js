@@ -57,16 +57,20 @@ const getDataLocalStorage = () => {
 }
 
 const getDataSelectByID = async (id) => {
-  const getData = await getDataLocalStorage()
+
+  const getData = await getDataLocalStorage();
+
+  console.log('el getData: ' + getData)
 
   // console.log('el getData: ' + getData)
 
   if (getData.length > 0) {
-    return getData.filter((data) => data.id == id)[0]
+    return getData.filter((data) => data.id == id)[0];
   }
 }
 
 const addDataToHtml = async (data) => {
+
   const cardBody = document.getElementById('data')
 
   cardBody.innerHTML = `

@@ -24,28 +24,30 @@ export const graph = (datos, contenedor) => {
           label: 'Wins',
           data: datosFormateados.wins,
           borderWidth: 1,
-          borderColor: '#00FF00',
-          backgroundColor: '#00FF0080',
+          borderColor: '#142274',
+          backgroundColor: '#142274',
         },
 
         {
           label: 'Ties',
           data: datosFormateados.ties,
           borderWidth: 1,
-          borderColor: '#FFFF00',
-          backgroundColor: '#FFFF0080',
+          borderColor: 'rgb(166, 162, 162)',
+          backgroundColor: 'rgb(166, 162, 162)',
         },
 
         {
           label: 'Losses',
           data: datosFormateados.losses,
           borderWidth: 1,
-          borderColor: '#FF0000',
-          backgroundColor: '#FF000080',
+          borderColor: 'red',
+          backgroundColor: 'red',
         },
       ],
     },
     options: {
+
+
       y: {
         grid: {
           drawBorder: true,
@@ -61,7 +63,8 @@ export const graph = (datos, contenedor) => {
       },
       elements: {
         bar: {
-          borderWidth: 2,
+          border: 2,
+
         },
       },
       responsive: true,
@@ -73,7 +76,7 @@ export const graph = (datos, contenedor) => {
           display: true,
           font: {
             size: 20,
-          },
+                    },
           text: datos.name + ' ' + datos.seasonDisplay,
         },
       },
