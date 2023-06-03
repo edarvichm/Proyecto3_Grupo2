@@ -54,7 +54,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a id="homepage" class="nav-link active" aria-current="page" href="#">Home</a>
+                <a
+                  id="homepage"
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Info</a>
@@ -70,7 +76,6 @@
 
     <div class="container-fluid">
       <div class="row">
-
         <aside class="side-bar col-3">
           <div class="liga-container mt-2">
             <h3 class="title-ligas">League</h3>
@@ -79,15 +84,19 @@
           </div>
         </aside>
 
-        <div id="selector-right-img" class="col-9 welcome">
-        </div>
+        <div id="selector-right-img" class="col-9 welcome"></div>
 
-        <main id="selector-right-menu" style="display: none;" class="col-9">
+        <main id="selector-right-menu" style="display: none" class="col-9">
           <div class="row">
             <div class="col-4">
               <div class="card d-flex flex-column mt-2 px-3 pb-3">
                 <h4 class="graph-title pt-3">Current League</h4>
-                <select class="form-select mt-2" aria-label="Default select example" id="year" alt="year">
+                <select
+                  class="form-select mt-2"
+                  aria-label="Default select example"
+                  id="year"
+                  alt="year"
+                >
                   <option disabled>Select Season Year</option>
                   <option selected value="2022">2022</option>
                   <option value="2021">2021</option>
@@ -100,9 +109,7 @@
                   <option value="2014">2014</option>
                   <option value="2013">2013</option>
                 </select>
-                <div id="data">
-
-                </div>
+                <div id="data"></div>
               </div>
             </div>
             <div class="col-8">
@@ -136,9 +143,7 @@
                       <p class="position-header m-0">Diff</p>
                     </div>
                   </div>
-                  <div id="position" class="m-0 p-0">
-                    
-                  </div>
+                  <div id="position" class="m-0 p-0"></div>
                 </div>
               </div>
             </div>
@@ -150,11 +155,10 @@
                 <h4 class="graph-title pt-3 px-3">Performance Table</h4>
               </div>
               <div class="col-12">
-                <canvas id="leagueStandingGraph"></canvas>   
+                <canvas id="leagueStandingGraph"></canvas>
               </div>
             </div>
           </section>
-
         </main>
       </div>
       <!-- END ROW -->
@@ -175,14 +179,14 @@
     <script src="./assets/js/main.js"></script>
 
     <script>
-
-      const home = document.getElementById('homepage');
+      const home = document.getElementById('homepage')
 
       home.addEventListener('click', (event) => {
-        const selectorRightImg = document.getElementById('selector-right-img');
-        selectorRightImg.style.display = "block";
+        const selectorRightImg = document.getElementById('selector-right-img')
+        const selectorRightMenu = document.getElementById('selector-right-menu')
+        selectorRightImg.style.display = 'block'
+        selectorRightMenu.style.display = 'none'
       })
-     
     </script>
   </body>
 </html>
