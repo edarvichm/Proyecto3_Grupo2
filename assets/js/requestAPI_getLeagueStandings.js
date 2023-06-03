@@ -10,8 +10,12 @@ export const getLeagueStandings = async (idSelected) => {
     )
     if (response.status === 200) {
       // console.log(response.data.data)
-      //enviar response a una función
+      
+      // container donde va el grafico
       const container = document.getElementById('leagueStandingGraph')
+      
+      console.log(response.data.data)
+      //enviar response a una función
       graph(response.data.data, container)
     }
   } catch (error) {
@@ -19,3 +23,7 @@ export const getLeagueStandings = async (idSelected) => {
   }
 }
 // getLeagueStandings('eng.1', 2022)
+
+export const getLeagueTable = async (idSelected) => {
+  
+}
