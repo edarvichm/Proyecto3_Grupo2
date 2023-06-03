@@ -116,6 +116,15 @@ div#selector-right-img:after {
     font-weight: 300;
 }
 
-p.position-table {
+.col-5 p.position-table {
+    font-size: .8rem;
+}
+
+.col-1 p.position-table, .col-1 p.position-header {
     font-size: .7rem;
+    text-align: center;
+}
+
+#position .row.m-0:nth-child(odd) {
+    background: #f6f6fd;
 }

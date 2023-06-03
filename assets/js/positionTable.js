@@ -34,45 +34,47 @@ export const positionTable = (table, contenedor) => {
 
     for(let i = 0;i<equipoStats.teamName.length;i++) {
         contenedor.innerHTML += `
-        <div class="col-5">
-            <p class="position-table m-0">
-                ${equipoStats.teamName[i]}
-            </p>
-        </div>
-        <div class="col-1 p-0">
-            <p class="position-table m-0">
-                ${equipoStats.pts[i]}
-            </p>
-        </div>
-        <div class="col-1 p-0">
-            <p class="position-table m-0">
-                ${equipoStats.wins[i]}
-            </p>
-        </div>
-        <div class="col-1 p-0">
-            <p class="position-table m-0">
-                ${equipoStats.ties[i]}
-            </p>
-        </div>
-        <div class="col-1 p-0">
-            <p class="position-table m-0">
-                ${equipoStats.losses[i]}
-            </p>
-        </div>
-        <div class="col-1 p-0">
-            <p class="position-table m-0">
-                ${equipoStats.goalFor[i]}
-            </p>
-        </div>
-        <div class="col-1 p-0">
-            <p class="position-table m-0">
-                ${equipoStats.goalAgainst[i]}
-            </p>
-        </div>
-        <div class="col-1 p-0">
-            <p class="position-table m-0">
-                ${equipoStats.goalDiff[i]}
-            </p>
+        <div class="row m-0">
+            <div class="col-5 ps-0">
+                <p class="position-table m-0">
+                    ${equipoStats.teamName[i]}
+                </p>
+            </div>
+            <div class="col-1 p-0">
+                <p class="position-table m-0">
+                    ${equipoStats.pts[i]}
+                </p>
+            </div>
+            <div class="col-1 p-0">
+                <p class="position-table m-0">
+                    ${equipoStats.wins[i]}
+                </p>
+            </div>
+            <div class="col-1 p-0">
+                <p class="position-table m-0">
+                    ${equipoStats.ties[i]}
+                </p>
+            </div>
+            <div class="col-1 p-0">
+                <p class="position-table m-0">
+                    ${equipoStats.losses[i]}
+                </p>
+            </div>
+            <div class="col-1 p-0">
+                <p class="position-table m-0">
+                    ${equipoStats.goalFor[i]}
+                </p>
+            </div>
+            <div class="col-1 p-0">
+                <p class="position-table m-0">
+                    ${equipoStats.goalAgainst[i]}
+                </p>
+            </div>
+            <div class="col-1 p-0">
+                <p class="position-table m-0">
+                    ${equipoStats.goalDiff[i]}
+                </p>
+            </div>
         </div>
     `
     }
